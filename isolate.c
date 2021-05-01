@@ -575,8 +575,8 @@ setup_root(void)
    * appearing outside of our namespace.
    * (systemd since version 188 mounts filesystems shared by default).
    */
-  if (mount(NULL, "/", NULL, MS_REC|MS_PRIVATE, NULL) < 0)
-    die("Cannot privatize mounts: %m");
+  //if (mount(NULL, "/", NULL, MS_REC|MS_PRIVATE, NULL) < 0)
+  //  die("Cannot privatize mounts: %m");
 
   if (mount("none", "root", "tmpfs", 0, "mode=755") < 0)
     die("Cannot mount root ramdisk: %m");
